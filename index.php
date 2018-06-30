@@ -11,10 +11,21 @@
         height: 200px;
         serverTime
     }
+    .about{
+        /*color:#00CC99;*/
+        /*background-color:#CC9933;*/
+        /*border-color:#0000FF;*/
+        border: 1px solid #ddd8d8;
+    }
+    /*.head{*/
+        /*background-color:#CC9933;*/
+        /*!*border: 1px solid ;*!*/
+        /*margin-bottom:10px;*/
+    /*}*/
 </style>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation" style="margin-bottom:0">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -36,35 +47,40 @@
             </p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>注册</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
         </ul>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">iOS</a></li>
-                <li><a href="#">SVN</a></li>
-                <li><a href="#">GIT</a></li>
+                <li onmouseover="addActiveClass(this);" onmouseout="removeActiveClass(this)"><a href="#">iOS</a></li>
+                <li onmouseover="addActiveClass(this);" onmouseout="removeActiveClass(this)"><a href="#">SVN</a></li>
+                <li onmouseover="addActiveClass(this);" onmouseout="removeActiveClass(this)"><a href="#">GIT</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <h2>
-                Hello,world!
-            </h2>
-            <h4 class="glyphicon-facetime-video">
-            </h4>
-            <p>
-            </p>
+<div class="header" style="background-image: url(http://image.youzhan.org/d/dd/2de797545de56274f03a5920eb3a1.jpg);height:288px;margin-bottom:10px;">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div style="height:50px;">
+
+                </div>
+                <h2>
+                    Hello,world!
+                </h2>
+                <h4 class="glyphicon-facetime-video">
+                </h4>
+                <p>
+                </p>
+            </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4">
-            <h2></h2>
+        <div class="col-md-4 about">
+            <h2>About</h2>
             <div class="fakeimg">
                 <img style="width:150px;height:auto" src="static/img/sujianhui.jpg" class="img-rounded">
             </div>
@@ -81,7 +97,7 @@
             </ul>
             <hr class="hidden-sm hidden-md hidden-lg">
         </div>
-        <div class="col-sm-8">
+        <div class="col-md-8">
             <h2>致自己</h2>
             <h5></h5>
             <div><img style="align-content: center" src="static/img/20180627.gif"></div>
@@ -117,13 +133,14 @@
 
 <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/index.js"></script>
 <script>
     $(function(){
         //获取服务器的时间
-        var serverTime =
+        let serverTime =
             <?php
                 function getMillisecond() {
-                    list($t1, $t2) = explode(' ', microtime());
+                    list($t1,$t2) = explode(' ', microtime());
                     return (float)sprintf('%.0f',(floatval($t1)+floatval($t2))*1000);
             }
                 echo getMillisecond();
@@ -131,11 +148,9 @@
         //每秒执行一次addTime函数,实现页面的时间每秒走动
         window.setInterval(function(){
             serverTime+=1000;
-            var d = new Date(serverTime);
-            var separate = '-';
+            let d = new Date(serverTime);
+            let separate = '-';
             $('.glyphicon-facetime-video').text(d.getFullYear()+separate+(d.getMonth()+1)+separate+d.getDate()+' '+d.getHours()+':'+d.getMinutes()+':'+d.getSeconds());
         },1000);
     });
 </script>
-</body>
-</html>

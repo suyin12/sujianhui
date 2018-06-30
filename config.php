@@ -9,6 +9,7 @@
 $pathInfo = pathinfo(__FILE__);
 //获取根目录
 $root = $_SERVER['DOCUMENT_ROOT'];
+//获取项目目录名称
 $projectName = substr($pathInfo['dirname'],strripos($pathInfo['dirname'],'\\'));
 //定义根目录
 define('DOCUMENT_ROOT',$root);
