@@ -1,0 +1,5 @@
+/vendor/
+.idea
+/db/
+/static/img/
+/static/resource/
