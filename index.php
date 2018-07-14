@@ -1,9 +1,7 @@
-<!--<audio autoplay='autoplay' controls preload='auto' src="static/resource/平凡之路.mp3">-->
-<!--你的浏览器版本太低，不支持audio标签-->
-<!--</audio>-->
 <?php
     //引入头部,并开启session
     require_once 'template/head.php';
+    require_once 'config.php';
     session_start();
 ?>
 <style>
@@ -47,8 +45,8 @@
             </p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span>注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
+            <li><a href="app/login/register.php"><span class="glyphicon glyphicon-user"></span>注册</a></li>
+            <li><a href="app/login/login.php"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
         </ul>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
