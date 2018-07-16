@@ -2,6 +2,7 @@
     require '../../config.php';
     include PROJECT_ROOT.'/template/head.php';
 ?>
+<style rel="stylesheet" href="<?php echo SERVER_PROJECT;?>/static/css/login.css"></style>
 <body>
 <div class="container">
     <div class="form row">
