@@ -128,10 +128,6 @@
     //引入底部
     require_once 'template/foot.php';
 ?>
-
-<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="static/js/index.js"></script>
 <script>
     $(function(){
         //获取服务器的时间

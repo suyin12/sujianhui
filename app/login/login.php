@@ -1,6 +1,6 @@
 <?php
     require '../../config.php';
-    include PROJECT_ROOT.'/template/head.php';
+    require_once PROJECT_ROOT.'/template/head.php';
 ?>
 <style rel="stylesheet" href="<?php echo SERVER_PROJECT;?>/static/css/login.css"></style>
 <body>
@@ -29,6 +29,14 @@
         </div>
     </div>
 </div>
-</body>
+<?php
+//引入底部
+require_once PROJECT_ROOT.'/template/foot.php';
+?>
+<script>
+    $(function(){
+        document.title = '登录';
+    });
+</script>
 
 
