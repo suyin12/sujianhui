@@ -2,7 +2,7 @@
     require '../../config.php';
     require_once PROJECT_ROOT.'/template/head.php';
 ?>
-<style rel="stylesheet" href="<?php echo SERVER_PROJECT;?>/static/css/login.css"></style>
+<link rel="stylesheet" href="<?php echo SERVER_PROJECT;?>/static/css/login.css">
 <body>
 <div class="container">
     <div class="form row">
@@ -29,13 +29,28 @@
         </div>
     </div>
 </div>
-<?php
-//引入底部
-require_once PROJECT_ROOT.'/template/foot.php';
-?>
 <script>
     $(function(){
         document.title = '登录';
+        var btn = $('.btn');
+        btn.on('click',function(){
+            //获取用户名
+            var username = $('#username').val();
+            //获取密码
+            var password = $('#password').val();
+            if(username === ''){
+                alert('用户名不能为空!');
+            }else if(password === ''){
+                alert('密码不能为空!');
+            }
+            if(username && password){
+                $.post("login.php",{username:username,password:password},function(result){
+                    $("span").html(result);
+                });
+            }
+
+        });
+
     });
 </script>
 

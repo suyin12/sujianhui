@@ -1,6 +1,5 @@
 <?php
     @include 'config.php';
-    //var_dump(SERVER_PROJECT);exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,9 +1,9 @@
 body{
-    background: url("../img/sujianhui.jpg");
+    background: url("../img/1.jpg");
     animation-name:myfirst;
-    animation-duration:12s;
+    animation-duration:18s;
     /*变换时间*/
-    animation-delay:2s;
+    animation-delay:3s;
     /*动画开始时间*/
     animation-iteration-count:infinite;
     /*下一周期循环播放*/
@@ -12,10 +12,12 @@ body{
 }
 @keyframes myfirst
 {
-    0%   {background:url("../img/sujianhui.jpg");}
-    34%  {background:url("../img/sujianhui.jpg");}
-    67%  {background:url("../img/sujianhui.jpg");}
-    100% {background:url("../img/sujianhui.jpg");}
+    0%   {background:url("../img/1.jpg");}
+    20%  {background:url("../img/2.jpg");}
+    40%  {background:url("../img/3.jpg");}
+    60%  {background:url("../img/4.jpg");}
+    80%  {background:url("../img/5.jpg");}
+    100% {background:url("../img/6.jpg");}
 }
 .form{background: rgba(255,255,255,0.2);width:400px;margin:120px auto;}
 /*阴影*/
