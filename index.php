@@ -45,8 +45,8 @@
             </p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="app/login/register.php"><span class="glyphicon glyphicon-user"></span>注册</a></li>
-            <li><a href="app/login/login.php"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
+            <li><a href="app/controllers/home/register.php"><span class="glyphicon glyphicon-user"></span>注册</a></li>
+            <li><a href="app/controllers/home/login.php"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
         </ul>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">

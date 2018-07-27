@@ -7,12 +7,13 @@
             "email": "su_yin12@qq.com"
         }
     ],
-    "require": {},
+    "require": {
+        "noahbuscher/macaw": "dev-master"
+    },
     "autoload": {
-        "psr-4": {
-            "app\\": "app",
-            "service\\": "service",
-            "model\\": "model"
-        }
+        "classmap": [
+            "app/controllers",
+            "app/models"
+        ]
     }
 }
