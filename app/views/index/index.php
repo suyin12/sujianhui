@@ -1,7 +1,6 @@
 <?php
     //引入头部,并开启session
-    require_once 'template/head.php';
-    require_once 'config.php';
+    require_once 'head.php';
     session_start();
 ?>
 <style>
@@ -45,8 +44,8 @@
             </p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="app/controllers/home/register.php"><span class="glyphicon glyphicon-user"></span>注册</a></li>
-            <li><a href="app/controllers/home/login.php"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
+            <li><a href="register"><span class="glyphicon glyphicon-user"></span>注册</a></li>
+            <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
         </ul>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
@@ -98,7 +97,7 @@
         <div class="col-md-8">
             <h2>致自己</h2>
             <h5></h5>
-            <div><img style="align-content: center" src="static/img/20180627.gif"></div>
+            <div><img style="align-content: center" src="../../../static/img/201806271.gif"></div>
             <p>2018-06-27 21:40:00</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业两年了,有人说：“时间，犹如白驹过隙。一眨眼，一年，还是一瞬间?
                 时间又好像烤箱里的面包，时间长了，面包就会融化，这也就是时间的痕迹”。一眨眼，说得真好；如今长大了，时间不再像小学寒假那会盼望
@@ -126,7 +125,7 @@
 </div>
 <?php
     //引入底部
-    require_once 'template/foot.php';
+    require_once 'foot.php';
 ?>
 <script>
     $(function(){

@@ -1,8 +1,7 @@
 <?php
-    require '../../config.php';
-    require_once PROJECT_ROOT.'/template/head.php';
+    require_once 'head.php';
 ?>
-<link rel="stylesheet" href="<?php echo SERVER_PROJECT;?>/static/css/login.css">
+<link rel="stylesheet" href="/static/css/login.css">
 <body>
 <div class="container">
     <div class="form row">
@@ -32,23 +31,17 @@
 <script>
     $(function(){
         document.title = '登录';
-        var btn = $('.btn');
+        let btn = $('.btn');
         btn.on('click',function(){
             //获取用户名
-            var username = $('#username').val();
+            let username = $('#username').val();
             //获取密码
-            var password = $('#password').val();
+            let password = $('#password').val();
             if(username === ''){
                 alert('用户名不能为空!');
             }else if(password === ''){
                 alert('密码不能为空!');
             }
-            if(username && password){
-                $.post("login.php",{username:username,password:password},function(result){
-                    $("span").html(result);
-                });
-            }
-
         });
 
     });

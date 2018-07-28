@@ -5,9 +5,8 @@
  */
 use NoahBuscher\Macaw\Macaw;
 
-Macaw::get('fuck', function() {
-    echo "成功！";
-});
+Macaw::get('index', 'IndexController@index');
+Macaw::get('login', 'IndexController@login');
 
 Macaw::get('(:all)', function($fu) {
     echo '未匹配到路由<br>'.$fu;

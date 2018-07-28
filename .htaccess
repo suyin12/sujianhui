@@ -13,11 +13,11 @@
 # Warning: unsupported at line 2:
 # RewriteBase /
 
-rewrite ^/(.*)/$ /$1 redirect;
-
-if (!-e $request_filename){
-	rewrite ^(.*)$ /sujianhui/public/index.php break;
-}
+#rewrite ^/(.*)/$ /$1 redirect;
+#判断是否存在表示判断是否存在请求地址中的目录或者文件，$request_filename是一个nginx处理好的变量，内容就是请求地址，不用理会，!-e是一个判断条件
+#if (!-e $request_filename){
+#	rewrite ^(.*)$ /public/index.php break;
+#}
 
 
 

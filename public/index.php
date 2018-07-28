@@ -2,20 +2,20 @@
 /**
  * Auth: sjh
  * Created: 2018/7/26 14:04
+ * 项目单一入口文件
  */
-// Autoload 自动载入
+// autoload 自动载入
 require '../vendor/autoload.php';
+//生产环境下建议设置为off
+ini_set('display_errors',1);
+//设置PHP错误报告级别
+ini_set('error_reporting',E_ALL);
+
 //获取根目录
 $root = $_SERVER['DOCUMENT_ROOT'];
-//获取主机
-define('SERVER_NAME','http://'.$_SERVER['SERVER_NAME'].'/');
-//获取项目目录名称
-define('PROJECT_NAME',$arr[1]);
-//定义根目录
+
+//定义根目录常量
 define('DOCUMENT_ROOT',$root);
-//定义项目根目录绝对路径
-define('PROJECT_ROOT',DOCUMENT_ROOT.'/'.PROJECT_NAME);
-//定义服务器路径
-define('SERVER_PROJECT',SERVER_NAME.PROJECT_NAME);
-// 路由配置
+
+//引入路由文件
 require '../config/routes.php';
