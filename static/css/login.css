@@ -1,9 +1,9 @@
 body{
     background: url("../img/1.jpg");
     animation-name:myfirst;
-    animation-duration:18s;
+    animation-duration:12s;
     /*变换时间*/
-    animation-delay:3s;
+    animation-delay:2s;
     /*动画开始时间*/
     animation-iteration-count:infinite;
     /*下一周期循环播放*/

@@ -10,4 +10,7 @@ class IndexController{
     public function login(){
         require (__DIR__).'../../../views/index/login.php';
     }
+    public function loginDo(){
+        echo json_encode($_POST);
+    }
 }

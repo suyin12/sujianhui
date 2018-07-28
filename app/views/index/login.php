@@ -10,11 +10,11 @@
             <div class="col-md-9">
                 <div class="form-group">
                     <i class="fa fa-user fa-lg"></i>
-                    <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                    <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus" maxlength="20" value="sujianhui"/>
                 </div>
                 <div class="form-group">
                     <i class="fa fa-lock fa-lg"></i>
-                    <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="8"/>
+                    <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="8" value="sujianhui"/>
                 </div>
                 <div class="form-group">
                     <label class="checkbox">
@@ -42,6 +42,17 @@
             }else if(password === ''){
                 alert('密码不能为空!');
             }
+            $.ajax(
+                {
+                    type: "post",
+                    url: "loginDo",
+                    data: {"username": username},
+                    dataType: "JSON",
+                    success: function(data){
+                        alert('success!');
+                    }
+
+                });
         });
 
     });

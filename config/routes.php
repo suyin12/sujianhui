@@ -7,6 +7,8 @@ use NoahBuscher\Macaw\Macaw;
 
 Macaw::get('index', 'IndexController@index');
 Macaw::get('login', 'IndexController@login');
+//处理login
+Macaw::post('loginDo', 'IndexController@loginDo');
 
 Macaw::get('(:all)', function($fu) {
     echo '未匹配到路由<br>'.$fu;

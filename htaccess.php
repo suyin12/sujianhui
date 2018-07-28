@@ -239,3 +239,38 @@ Alias / def / ghi
 RewriteRule ^ (.+\.php)s$$1[T = application / x - httpd - php - source]
 
  * */
+
+//server {
+//    listen       80;
+//        server_name  su.cn www.su.cn; #可添加多个，多个之间“空格”分开
+//
+//        #autoindex on;#打开目录浏览，这样当没有找到index文件，就也已浏览目录中的文件
+//        location / {
+//        root   d:/wnmp/nginx/htdocs/sujianhui;
+//            index  index.html index.htm index.php;
+//
+//            #此处是伪静态配置
+//            #if (!-e $request_filename) {
+//                #rewrite  ^(.*)$  /public/index.php/?/$1  last;
+//                #break;
+//            #}
+//			if (!-e $request_filename){
+//            rewrite ^(.*)$ /public/index.php last;
+//				break;
+//			}
+//			#include d:/wnmp/nginx/htdocs/sujianhui/.htaccess;
+//
+//        }
+//        error_page   500 502 503 504  /50x.html;
+//        location = /50x.html {
+//        root   d:/wnmp/nginx/htdocs/sujianhui;
+//        }
+//
+//        location ~ \.php$ {
+//    root           d:/wnmp/nginx/htdocs/sujianhui;
+//            fastcgi_pass   127.0.0.1:9000;
+//            fastcgi_index  index.php;
+//            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+//            include        fastcgi_params;
+//        }
+//    }
